@@ -1,0 +1,14 @@
+.header{
+    height: 5rem;
+    background-color: blueviolet;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ 
+ .header img{
+    width: 4.5rem;
+ }
+ 
