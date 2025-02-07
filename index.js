@@ -5,7 +5,7 @@ import { tareas } from "./componentes/tareas/tareas.js";
 
 let DOM = document.querySelector("#root");
 
-
+    
 DOM.appendChild(header());
 DOM.appendChild(formulario());
 DOM.appendChild(tareas());
