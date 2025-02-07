@@ -1,0 +1,61 @@
+.tareas {
+    width: 320px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listado_tareas {
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.tarea_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: beige;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.tarea_item:hover {
+    background: #e0e0e0;
+}
+
+.tarea_checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.cada_tarea {
+    font-size: 14px;
+    color: #333;
+}
+
+.input_tarea {
+    width: 85%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 14px;
+}
+
+.btn_agregar {
+    width: 100px;
+    padding: 8px;
+    margin-top: 10px;
+    background: rgb(189, 173, 173);
+    color: #333;
+    border-radius: 5px;
+
+}
