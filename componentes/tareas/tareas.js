@@ -16,14 +16,25 @@ function tareas() {
         let checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.className = "tarea_checkbox";
-
+    
         let tareaItem = document.createElement('div');
         tareaItem.className = "tarea_item";
         tareaItem.appendChild(checkbox);
         tareaItem.appendChild(l1);
         
+        // Evento para marcar/desmarcar tarea
+    checkbox.addEventListener('change', () => {
+    l1.classList.toggle("completada"); // Agrega o quita la clase que subraya
+        });
+
+        tareaItem.appendChild(checkbox);
+        tareaItem.appendChild(l1);
         listado.appendChild(tareaItem);
     });
+    
+
+    let inputContainer = document.createElement('div');
+    inputContainer.className = "input_container"; // Nueva clase contenedora
 
     let inputTarea = document.createElement('input');
     inputTarea.type = "text";
@@ -34,8 +45,10 @@ function tareas() {
     botonAgregar.innerText = "Add";
     botonAgregar.className = "btn_agregar";
 
-    tareas.appendChild(inputTarea);
-    tareas.appendChild(botonAgregar);
+    inputContainer.appendChild(inputTarea);
+    inputContainer.appendChild(botonAgregar);
+    tareas.appendChild(inputContainer);
+
 
     return tareas;
 }
