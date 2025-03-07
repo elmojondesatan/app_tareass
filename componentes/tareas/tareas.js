@@ -1,12 +1,34 @@
-import { data } from './data.js';
 
-function tareas() {
+
+function consultarTareasBackEnd(){
+    fetch('http://localhost:3000/tarea')
+    .then(response => response.json())
+    .then(data => cargarTareasDOM(data))
+    .catch(error => console.error('Error:', error));
+}
+
+function cargarTareasDOM(data){
+    let DOM = document.querySelector("#root");
+    DOM.appendChild(rendetareas(data));
+
+}
+
+function rendetareas(data) {
+
+    let listaTareas = consultarTareas();
+    console.log("-----------");
+    console.log(listaTareas);
+
     let tareas = document.createElement('div');
     tareas.className = "tareas";
 
     let listado = document.createElement('div');
     listado.className = "listado_tareas";
     tareas.appendChild(listado);
+
+    data.forEach((e)=>{
+        console.log(e);
+    });
 
     data.forEach(texto => {
         let l1 = document.createElement('div');
@@ -53,4 +75,4 @@ function tareas() {
     return tareas;
 }
 
-export { tareas };
+export { consultarTareasBackEnd };
