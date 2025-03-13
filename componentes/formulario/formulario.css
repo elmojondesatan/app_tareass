@@ -1,0 +1,29 @@
+.formulario{
+    width: auto;
+    height: 10rem;
+    border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.formulario input{
+    width: 40rem;
+    height: 4rem;
+
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+    border-radius: 1rem;
+}
+
+.formulario button {
+    width: 6rem;
+    height: 4rem;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}

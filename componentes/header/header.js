@@ -1,4 +1,4 @@
-function header(){
+ export function cargarHeader(){
     let header = document.createElement('header');
     header.className = "header";
 
@@ -14,5 +14,3 @@ function header(){
 
     return header;
 }
-
-export {header}

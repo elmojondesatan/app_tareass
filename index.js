@@ -1,16 +1,16 @@
-import { header } from "./componentes/header/header.js";
-import { formulario } from "./componentes/formulario/formulario.js";
-import { tareas } from "./componentes/tareas/tareas.js";
-import { consultarTareasBackEnd } from "./componentes/tareas/tareas.js";
+import { cargarHeader } from "./componentes/header/header.js";
+import { cargarFormulario } from "./componentes/formulario/formulario.js";
+import { cargarTareas } from "./componentes/formulario/funcionesFormularios.js";
 
-let DOM = document.querySelector("#root");
 
 function cargarDOM() {
-    DOM.appendChild(header());
-    DOM.appendChild(formulario());
-    DOM.appendChild(tareas());
+    let DOM = document.querySelector("#root");
+    DOM.className = "DOM";
 
-    consultarTareasBackEnd(); 
+    DOM.appendChild(cargarHeader());
+    DOM.appendChild(cargarFormulario());
+    DOM.appendChild(cargarTareas());
+
 }
 
 cargarDOM();
