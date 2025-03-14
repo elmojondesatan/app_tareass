@@ -1,4 +1,4 @@
-import { cargarTareas } from "./funcionesFormularios.js"; // Asegúrate de importar correctamente
+import { cargarTareas } from "./funcionesFormularios.js"; 
 
 export function cargarFormulario() {
     const formulario = document.createElement("div");
@@ -7,15 +7,14 @@ export function cargarFormulario() {
     const input = document.createElement("input");
     input.type = "text";
     input.placeholder = "Write a task...";
-    input.id = "task-input"; // Agregar un ID al input
+    input.id = "task-input"; 
 
     const button = document.createElement("button");
     button.textContent = "Add";
-    button.id = "task-button"; // 🛠 Agregar un ID al botón
+    button.id = "task-button"; 
 
-    // Evento para agregar tareas
     button.addEventListener("click", () => {
-        console.log("📌 Input antes de pasar a cargarTareas:", input); // 🔍 Verifica si es undefined
+        console.log("📌 Input antes de pasar a cargarTareas:", input); 
         cargarTareas(input);
     });
 

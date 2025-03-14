@@ -9,9 +9,8 @@ export function itemTarea(contenido) {
 
     let nombreTarea = document.createElement("h1");
     nombreTarea.className = "h1-1";
-    nombreTarea.innerText = contenido.nombre; // Accedemos a la propiedad "nombre"
+    nombreTarea.innerText = contenido.nombre; 
 
-    // Evento para tachar la tarea al marcar el checkbox
     checkbox.addEventListener("change", completarTarea);
 
     label.appendChild(checkbox);

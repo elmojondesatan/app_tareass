@@ -2,7 +2,7 @@ import { itemTarea } from "../tareas/itemTareas.js";
 
 export function cargarTareas(input) {
     if (!input) {
-        input = document.querySelector("#task-input"); // Intentar obtenerlo desde el DOM
+        input = document.querySelector("#task-input");
         if (!input) {
             console.error("❌ Error: No se encontró el input en el DOM.");
             alert("No se encontró el campo de entrada. Asegúrate de que el formulario se cargó correctamente.");
@@ -11,9 +11,9 @@ export function cargarTareas(input) {
         console.warn("⚠️ Input no recibido, obteniendo desde el DOM:", input);
     }
 
-    console.log("📌 Valor del input antes de leer:", input?.value); // Debug
+    console.log("📌 Valor del input antes de leer:", input?.value); 
 
-    if (!input.value.trim()) {  // Verificar si el input está vacío
+    if (!input.value.trim()) {  
         console.error("❌ Error: No se encontró el input o está vacío.");
         alert("Por favor, escribe una tarea antes de agregarla.");
         return;
@@ -21,7 +21,6 @@ export function cargarTareas(input) {
 
     const nombreTarea = input.value.trim();
 
-    // Enviar la tarea al backend
     fetch('http://localhost:3000/agregar', {
         method: 'POST',
         headers: {
@@ -40,12 +39,11 @@ export function cargarTareas(input) {
     })
     .then(data => {
         console.log('✅ Tarea agregada:', data);
-        input.value = ''; // Limpiar el input después de agregar la tarea
+        input.value = ''; 
 
-        // Agregar la tarea al DOM (esto depende de tu estructura)
-        const listaTareas = document.querySelector("#task-list"); // Asegúrate de tener una lista en el HTML
+        const listaTareas = document.querySelector("#task-list"); 
         if (listaTareas) {
-            const nuevaTarea = itemTarea(data); // Suponiendo que itemTarea genera un nodo HTML
+            const nuevaTarea = itemTarea(data); 
             listaTareas.appendChild(nuevaTarea);
         } else {
             console.warn("⚠️ No se encontró la lista de tareas en el DOM.");

@@ -9,7 +9,6 @@ function cargarDOM() {
     DOM.appendChild(cargarHeader());
     DOM.appendChild(cargarFormulario());
 
-    // Esperar un pequeño tiempo para que el botón se agregue al DOM
     setTimeout(() => {
         const boton = document.querySelector("#task-button");
         if (boton) {
@@ -20,7 +19,7 @@ function cargarDOM() {
         } else {
             console.error("❌ Error: No se encontró el botón de tareas.");
         }
-    }, 100); // Pequeño retraso para asegurar que el botón existe
+    }, 100); 
 
     return DOM;
 }
